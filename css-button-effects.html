@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<title>Button Effects</title>
+
+		<style type="text/css">
+			div{
+
+			}
+			.btn-1{
+				background: #000;
+				color: #fff;
+				border-radius: 30px;
+				transition: all .25s ease;
+			    width: 100px;
+    			height: 30px;
+			    position: absolute;
+		        line-height: 30px;
+    			text-align: center;
+			}
+			.btn-1:hover{
+				transform: translate(-12px, -12px);
+			}
+			.btn-1:hover:after{
+				transform: translate(6px, 6px);
+			}
+			.btn-1:hover:before{
+				transform: translate(12px, 12px);
+			}
+			.btn-1:after,
+			.btn-1:before{
+				content: '';
+				position: absolute;
+				opacity: .3;
+				background: #000;
+				border-radius: inherit;
+			    width: 100px;
+			    height: 30px;
+				left: 0px;
+				bottom: 0px;
+				z-index: -1;
+				transition: all .25s ease;
+			}
+			.btn-2{
+			    line-height: 30px;
+			    padding: 0 10px;
+			}
+			.btn-2:hover:after{
+				transform: translate(-5px, -5px);
+			}
+			.btn-2:hover:before{
+				transform: translate(5px, 5px);
+			}
+			.btn-2:after,
+			.btn-2:before{
+				border:3px solid #000;
+				content: '';
+				position: absolute;
+				border-radius: inherit;
+			    width: calc(100px - 6px);
+			    height: calc(30px - 6px);
+			    left: 0px;
+			    z-index: -1;
+			    transition: all .25s ease;
+			}
+			.btn-3:hover:after{
+				width: 100%;
+			}
+			.btn-3:after{
+				content: '';
+				position: absolute;
+				border-radius: inherit;
+				width: 10%;
+				height: 5px;
+				background: #000;
+				left: 0px;
+				bottom: 0px;
+				z-index: -1;
+				transition: all .25s ease;
+				left: 50%;
+				transform: translate(-50%);
+			}
+			.btn-4{
+				overflow: hidden;
+				color: #fff;
+				border-radius: 30px;
+				box-shadow: 0px -0px 0px 0px rgba(143, 64, 248, .5),
+							0px 0px 0px 0px rgba(39, 200, 255, .5)
+			}
+			.btn-4:hover{
+				transform: translate(0, -6px);
+				box-shadow: 10px -10px 25px 0px rgba(143, 64, 248, .5),
+							-10px 10px 25px 0px rgba(39, 200, 255, .25)
+			}
+			.btn-4:hover:after{
+				transform: rotate(180deg);
+			}				
+			.btn-4:after{
+				content: '';
+			    width: 150px;
+			    height: 50px;
+			    position: absolute;
+			    top: 0px;
+			    left: 0px;
+				background-color: #ff3cac;
+				z-index: -1;
+				transition: all .5s ease;
+				background-image: linear-gradient(225deg, #27d86c 0%, #26caf8 50%, #c625d0 100%);
+			}
+			.btn-5:hover{
+			    width: 100px;
+    			height: 30px;
+			    position: absolute;
+		        line-height: 30px;
+    			text-align: center;
+    		}
+			.btn-5:hover{
+				color: #fff;
+			}
+			.btn-5:hover:after{
+				transform: scale(1);
+				opacity: 1;
+			}
+			.btn-5:after{
+				content: '';
+			    width: 100px;
+			    height: 30px;
+			    border-radius: 30px;
+			    position: absolute;
+			    top: 0px;
+			    left: 0px;
+			    transform: scale(.1);
+			    background: #000;
+			    z-index: -1;
+			    opacity: 0;
+			    transition: all .25s ease;
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+			<div style="margin-left: 5rem;margin-top: 1rem;position: absolute;">
+				<a class="btn-1">Button 1</a>
+			</div>
+			<div style="margin-left: 5rem;margin-top: 5rem;position: absolute;">
+				<a class="btn-2">Button 2</a>
+			</div>
+			<div style="margin-left: 5rem;margin-top: 10rem;position: absolute;">
+				<a class="btn-3">Button 3</a>
+			</div>
+			<div style="margin-left: 5rem;margin-top: 15rem;position: absolute;">
+				<a class="btn-4">Button 4</a>
+			</div>
+			<div style="margin-left: 5rem;margin-top: 20rem;position: absolute;">
+				<a class="btn-5">Button 5</a>
+			</div>
+		</div>
+
+		<script type="text/javascript">
+			
+		</script>
+	</body>
+</html>
